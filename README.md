@@ -43,6 +43,7 @@ const App = () => (
 - [Home page](https://ui.wooble.team/)
 - [Components Overview](https://ui.wooble.team/docs)
 - [It's wooble Icons](https://ui.wooble.team/icons)
+- [Npm page](https://www.npmjs.com/package/@itswooble/ui)
 
 ## ⌨️ Development
 We use storybook. Clone locally:

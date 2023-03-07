@@ -1,6 +1,6 @@
 {
   "name": "@itswooble/ui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An enterprise-class UI design language and React UI library.",
   "scripts": {
     "build": "rollup -c",
