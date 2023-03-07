@@ -13,7 +13,6 @@ const packageJson = JSON.parse(
   	)
 );
 
-
 export default [
 	{
 		input: 'src/index.ts',
