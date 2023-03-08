@@ -1,16 +1,15 @@
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
-import postcss from 'rollup-plugin-postcss';
 import dts from 'rollup-plugin-dts';
 import terser from '@rollup/plugin-terser';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+import postcss from 'rollup-plugin-postcss';
 import { readFile } from 'fs/promises';
 
 const packageJson = JSON.parse(
 	await readFile(
-		new URL('./package.json', import.meta.url)
-  	)
+		new URL('./package.json', import.meta.url))
 );
 
 export default [
@@ -33,7 +32,10 @@ export default [
 			resolve(),
 			commonjs(),
 			typescript({ tsconfig: './tsconfig.json' }),
-			postcss(),
+			postcss({
+				modules: true,
+				extract: false,
+			}),
 			terser(),
 		],
 	},

@@ -1,11 +1,14 @@
 import React from 'react';
-import Props from './Button.props';
-import './Button.style.css';
+import { default as cn } from 'classnames';
 
-const Button: React.FC<Props> = ({ ...props }) => {
+import Props from './Button.props';
+
+import styles from './Button.module.css';
+
+const Button: React.FC<Props> = ({ className = '', children, ...props }) => {
 	return (
-		<button {...props}>
-			button
+		<button className={cn(className, styles.button)} {...props}>
+			{children}
 		</button>
 	);
 };
