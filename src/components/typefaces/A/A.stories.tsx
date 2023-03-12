@@ -4,15 +4,16 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { default as Component } from './index';
 
 export default {
-	title: 'Elements',
+	title: 'Typefaces',
 	component: Component,
 } as ComponentMeta<typeof Component>;
 
 const Template: ComponentStory<typeof Component> = (args) => <Component {...args} />;
 
-export const Button = Template.bind({});
+export const A = Template.bind({});
 
-Button.args = {
+A.args = {
 	children: 'Hello world',
-	disabled: false,
+	href: '#',
+	variant: 'BodyTextRegular_18',
 };

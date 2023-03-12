@@ -4,15 +4,15 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { default as Component } from './index';
 
 export default {
-	title: 'Elements',
+	title: 'Typefaces',
 	component: Component,
 } as ComponentMeta<typeof Component>;
 
 const Template: ComponentStory<typeof Component> = (args) => <Component {...args} />;
 
-export const Button = Template.bind({});
+export const H4 = Template.bind({});
 
-Button.args = {
+H4.args = {
 	children: 'Hello world',
-	disabled: false,
+	variant: 'BodyTextRegular_18',
 };

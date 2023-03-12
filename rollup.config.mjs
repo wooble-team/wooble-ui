@@ -7,10 +7,7 @@ import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
 import { readFile } from 'fs/promises';
 
-const packageJson = JSON.parse(
-	await readFile(
-		new URL('./package.json', import.meta.url))
-);
+const packageJson = JSON.parse(await readFile(new URL('./package.json', import.meta.url)));
 
 export default [
 	{
@@ -43,6 +40,6 @@ export default [
 		input: 'dist/esm/types/index.d.ts',
 		output: [{ file: 'dist/index.d.ts', format: 'esm' }],
 		plugins: [dts()],
-		external: [/\.(css|less|scss)$/],
+		external: [/\.(css|less|scss|sass)$/],
 	},
 ];
