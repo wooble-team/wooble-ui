@@ -35,6 +35,7 @@
   },
   "homepage": "https://ui.wooble.team",
   "publishConfig": {
+	"access": "public",
     "registry": "https://registry.npmjs.org/"
   },
   "main": "dist/cjs/index.js",
@@ -45,7 +46,6 @@
   "types": "dist/index.d.ts",
   "devDependencies": {
     "@babel/core": "^7.21.0",
-    "@itswooble/colors": "^1.0.0",
     "@rollup/plugin-commonjs": "^24.0.1",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-terser": "^0.4.0",
