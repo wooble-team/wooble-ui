@@ -1285,6 +1285,18 @@
   resolved "https://registry.yarnpkg.com/@itswooble/colors/-/colors-1.0.0.tgz#11e75db7ab1b028b3feb1994be37fe0cbf8e6a14"
   integrity sha512-KpI1espjs9Ux/0/bm1LWTZrpqN4A5lvrmyZsWCDFcU11avJAj0zNV5OW7CHnPalzuLAQdCClx9myizqkxruU3w==
 
+"@itswooble/colors@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@itswooble/colors/-/colors-1.0.1.tgz#84935aad0a0d8feea504d15a3602ae7e0b32a128"
+  integrity sha512-rrEAUiGhW3//TfOa0BdJSHkQUgZ3HVNxP4GtgptbVpq8xKyXurct9CLcMBY0RtfJ9CSBgu1NubgAFjreJmCyUA==
+
+"@itswooble/icons@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@itswooble/icons/-/icons-0.0.5.tgz#f9a971b794317a26f54e02ad0862022146f9d929"
+  integrity sha512-ndMM1G5AozMRnNmqtpW1DY5UP8z1zpNe+YjXut4noWN5gMc3Fpl7tQZsnYwRjhfpbUe00VeIbfwDVAVgFyYVCA==
+  dependencies:
+    "@itswooble/colors" "^1.0.0"
+
 "@jest/transform@^26.6.2":
   version "26.6.2"
   resolved "https://registry.yarnpkg.com/@jest/transform/-/transform-26.6.2.tgz#5ac57c5fa1ad17b2aae83e73e45813894dcf2e4b"

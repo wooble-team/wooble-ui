@@ -3,7 +3,7 @@
   "version": "0.0.14",
   "description": "An enterprise-class UI design language and React UI library.",
   "scripts": {
-	"prepublishOnly": "rollup -c",
+    "prepublishOnly": "rollup -c",
     "build": "rollup -c",
     "storybook": "start-storybook -p 6006 -s ./assets",
     "build-storybook": "build-storybook"
@@ -35,7 +35,7 @@
   },
   "homepage": "https://ui.wooble.team",
   "publishConfig": {
-	"access": "public",
+    "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
   "main": "dist/cjs/index.js",
@@ -83,6 +83,7 @@
     "react": "^18.2.0"
   },
   "dependencies": {
-	"@itswooble/colors": "^1.0.0"
+    "@itswooble/colors": "^1.0.1",
+    "@itswooble/icons": "^0.0.5"
   }
 }

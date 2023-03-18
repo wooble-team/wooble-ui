@@ -1,6 +1,7 @@
 import React from 'react';
 import { default as cn } from 'classnames';
 import { colors } from '@itswooble/colors';
+import { Loading } from '@itswooble/icons';
 
 import { getTypefaces } from '../../typefaces';
 
@@ -19,7 +20,9 @@ const Button: React.FC<Props> = ({ className = '', shape = 'default', variant = 
 				[styles.round]: shape === 'round',
 				[styles.circle]: shape === 'circle',
 
-				[styles.disabled]: disabled,
+				[styles.disabled]: disabled || isLoading,
+
+				[styles.iconOnly]: !children,
 			})}
 			style={{
 				backgroundColor: variant === 'primary' ? colors[color] : style.backgroundColor,
@@ -30,7 +33,7 @@ const Button: React.FC<Props> = ({ className = '', shape = 'default', variant = 
 			{...props}
 		>
 			{children}
-			{icon}
+			{isLoading ? <Loading style={{ fill: 'white' }} width={24} height={24} /> : icon}
 		</button>
 	);
 };
