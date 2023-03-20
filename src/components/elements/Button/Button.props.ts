@@ -8,7 +8,7 @@ interface Props extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement
 	isLoading?: boolean;
 	icon?: ReactNode;
 	shape?: 'default' | 'round' | 'circle';
-	color?: Colors;
+	color?: Colors | string;
 	typeface?: Typefaces;
 };
 
