@@ -84,6 +84,6 @@
   },
   "dependencies": {
     "@itswooble/colors": "^1.0.1",
-    "@itswooble/icons": "^0.0.5"
+    "@itswooble/icons": "^0.0.7"
   }
 }

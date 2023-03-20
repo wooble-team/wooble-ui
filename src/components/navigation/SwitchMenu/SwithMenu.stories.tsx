@@ -1,20 +1,30 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { ArrowRight2 } from '@itswooble/icons';
 
 import { default as Component } from './index';
 
 export default {
-	title: 'Elements',
+	title: 'Navigation',
 	component: Component,
 } as ComponentMeta<typeof Component>;
 
 const Template: ComponentStory<typeof Component> = (args) => <Component {...args} />;
 
-export const Button = Template.bind({});
+export const SwitchMenu = Template.bind({});
 
-Button.args = {
-	children: 'Hello world',
-	disabled: false,
-	icon: <ArrowRight2 width={24} height={24} color='white' />,
+SwitchMenu.args = {
+	items: [
+		{
+			label: 'Search',
+			value: 'Search',
+		},
+		{
+			label: 'Profile',
+			value: 'Profile',
+		},
+		{
+			label: 'Cart',
+			value: 'Cart',
+		},
+	],
 };

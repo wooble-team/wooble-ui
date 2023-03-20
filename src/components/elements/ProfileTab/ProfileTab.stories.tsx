@@ -1,6 +1,5 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { ArrowRight2 } from '@itswooble/icons';
 
 import { default as Component } from './index';
 
@@ -11,10 +10,9 @@ export default {
 
 const Template: ComponentStory<typeof Component> = (args) => <Component {...args} />;
 
-export const Button = Template.bind({});
+export const ProfileTab = Template.bind({});
 
-Button.args = {
-	children: 'Hello world',
-	disabled: false,
-	icon: <ArrowRight2 width={24} height={24} color='white' />,
+ProfileTab.args = {
+	title: 'Name Surname',
+	subtitle: 'example@mail.ru',
 };
