@@ -1,0 +1,33 @@
+.container {
+	height: 58px;
+	padding: 0 16px;
+
+	cursor: text;
+
+	border-width: 1px;
+	border-radius: 15px;
+}
+
+.placeholder {
+	padding-top: 16px;
+
+	transition: all .1s;
+
+	font-weight: 700;
+}
+
+.placeholder-focused {
+	padding-top: 8px;
+
+	font-size: 12px;
+}
+
+.input {
+	outline: none;
+
+	background: transparent;
+}
+
+.error-message {
+	margin: 2px 0 0 18px;
+}
