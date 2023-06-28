@@ -4,11 +4,11 @@ import { black, gray300, red } from '@itswooble/colors';
 
 import { P, getTypefaces } from '../../typefaces';
 
-import Props from './Radio';
+import Props from './Checkbox';
 import BACKGROUND from './background.config';
-import styles from './Radio.module.css';
+import styles from './Checkbox.module.css';
 
-const Radio: React.FC<Props> = ({ className = '', items, errorMessage, color = 'blue300', ...props }) => {
+const Checkbox: React.FC<Props> = ({ className = '', items, errorMessage, color = 'blue300', ...props }) => {
 	const inputRef = useRef() as MutableRefObject<HTMLInputElement>;
 
 	return (
@@ -24,7 +24,7 @@ const Radio: React.FC<Props> = ({ className = '', items, errorMessage, color = '
 					>
 						<input
 							ref={inputRef}
-							type='radio'
+							type='checkbox'
 							className={styles.input}
 							id={i.value}
 							style={{
@@ -55,4 +55,4 @@ const Radio: React.FC<Props> = ({ className = '', items, errorMessage, color = '
 	);
 };
 
-export default Radio;
+export default Checkbox;

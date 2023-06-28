@@ -3,7 +3,7 @@ import { Colors } from '@itswooble/colors';
 
 interface Props extends DetailedHTMLProps<TextareaHTMLAttributes<HTMLTextAreaElement>, HTMLTextAreaElement> {
 	errorMessage?: string;
-	color?: Colors | string;
+	color?: Colors;
 }
 
 export default Props;

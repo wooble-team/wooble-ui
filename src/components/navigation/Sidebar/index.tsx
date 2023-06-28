@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { default as cn } from 'classnames';
-import { black, gray100, gray500 } from '@itswooble/colors';
+import { gray100 } from '@itswooble/colors';
 
 import { ProfileTab } from '../../elements';
-import { getTypefaces } from '../../typefaces';
+import { A, P } from '../../typefaces';
 
 import Props from './Sidebar.props';
 import styles from './Sidebar.module.css';
@@ -21,9 +21,9 @@ const Sidebar: React.FC<Props> = ({ className = '', items, activeItem = 0, profi
 		<nav className={cn(className, styles.wrapper)} {...props}>
 			<div>
 				{logo && (
-					<a href={logoHref} className={styles.logo}>
+					<A href={logoHref} className={styles.logo}>
 						{logo}
-					</a>
+					</A>
 				)}
 				<div className={styles.container}>
 					<div
@@ -32,7 +32,7 @@ const Sidebar: React.FC<Props> = ({ className = '', items, activeItem = 0, profi
 					></div>
 					<div className={styles.content}>
 						{items.map((i, num) => (
-							<a
+							<A
 								href={i.href}
 								className={styles.item}
 								onMouseEnter={() => setSpanPadding(num * ITEM_HEIGHT)}
@@ -43,13 +43,13 @@ const Sidebar: React.FC<Props> = ({ className = '', items, activeItem = 0, profi
 								<div className={styles.icon}>
 									{activeItem === num && i.activeIcon ? i.activeIcon : i.icon}
 								</div>
-								<p
-									className={getTypefaces('BodyText_16')}
-									style={{ color: activeItem === num ? black : gray500 }}
+								<P
+									variant='BodyText_16'
+									color={activeItem === num ? 'black' : 'gray500'}
 								>
 									{i.label}
-								</p>
-							</a>
+								</P>
+							</A>
 						))}
 					</div>
 				</div>

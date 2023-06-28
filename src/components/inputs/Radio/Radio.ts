@@ -1,5 +1,5 @@
-import { Colors } from '@itswooble/colors';
 import { DetailedHTMLProps, InputHTMLAttributes } from 'react';
+import { Colors } from '@itswooble/colors';
 
 interface IRadioItem {
 	label: string;

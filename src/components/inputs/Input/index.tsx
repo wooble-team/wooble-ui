@@ -1,8 +1,8 @@
 import React, { MutableRefObject, useRef, useState } from 'react';
 import { default as cn } from 'classnames';
-import { black, Colors, colors, colorsVariants, gray300, gray500, red } from '@itswooble/colors';
+import { black, colors, gray300, red } from '@itswooble/colors';
 
-import { getTypefaces } from '../../typefaces';
+import { P } from '../../typefaces';
 
 import Props from './Input.props';
 import styles from './Input.module.css';
@@ -16,7 +16,7 @@ const Input: React.FC<Props> = ({ className = '', color = 'blue300', errorMessag
 
 	function getBorder() {
 		if(isFocused)
-			return colorsVariants.includes(color as Colors) ? colors[color as Colors] : color;
+			return colors[color];
 		else if(errorMessage)
 			return red;
 		else
@@ -37,16 +37,14 @@ const Input: React.FC<Props> = ({ className = '', color = 'blue300', errorMessag
 					inputRef.current?.focus();
 				}}
 			>
-				<p
-					className={cn(className, styles.placeholder, {
+				<P
+					className={cn(styles.placeholder, {
 						[styles['placeholder-focused']]: isFocused || value || localValue,
 					})}
-					style={{
-						color: errorMessage ? red : gray500,
-					}}
+					color={errorMessage ? 'red' : 'gray500'}
 				>
 					{placeholder}
-				</p>
+				</P>
 				<input
 					ref={inputRef}
 					onFocus={(e) => {
@@ -62,16 +60,16 @@ const Input: React.FC<Props> = ({ className = '', color = 'blue300', errorMessag
 						onChange(e);
 					}}
 					value={value}
-					className={cn(className, styles.input)}
+					className={styles.input}
 					style={{
 						color: black,
 					}}
 					{...props} />
 			</div>
 			{errorMessage && (
-				<p className={cn([styles['error-message']], getTypefaces('BodyText_14'))} style={{ color: red }}>
+				<P variant='BodyText_14' color='red' className={styles['error-message']}>
 					{errorMessage}
-				</p>
+				</P>
 			)}
 		</>
 	);

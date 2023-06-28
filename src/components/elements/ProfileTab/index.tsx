@@ -1,8 +1,8 @@
 import React from 'react';
 import { default as cn } from 'classnames';
-import { Colors, blue300, colors, colorsVariants, gray500, white } from '@itswooble/colors';
+import { colors } from '@itswooble/colors';
 
-import { getTypefaces } from '../../typefaces';
+import { P } from '../../typefaces';
 
 import Props from './ProfileTab.props';
 import styles from './ProfileTab.module.css';
@@ -21,25 +21,23 @@ const ProfileTab: React.FC<Props> = ({ className = '', avatarColor = 'blue300', 
 					<div
 						className={styles.avatar}
 						style={{
-							backgroundColor: colorsVariants.includes(avatarColor as Colors)
-								? colors[avatarColor as Colors]
-								: blue300,
+							backgroundColor: colors[avatarColor],
 						}}
 					>
-						<p className={getTypefaces('Headline_30')} style={{ color: white }}>
+						<P variant='Headline_30' color='white'>
 							{title[0]}
-						</p>
+						</P>
 					</div>
 				)
 			}
 
-			<p className={getTypefaces('BoldBodyText_14')}>
+			<P variant='BoldBodyText_14'>
 				{title}
-			</p>
+			</P>
 			{subtitle && (
-				<p className={getTypefaces('BodyText_14')} style={{ color: gray500 }}>
+				<P variant='BodyText_14' color='gray500'>
 					{subtitle}
-				</p>
+				</P>
 			)}
 		</div>
 	);

@@ -1,6 +1,8 @@
 import React, { MutableRefObject, useRef, useState } from 'react';
 import { default as cn } from 'classnames';
-import { black, Colors, colors, colorsVariants, gray300, gray500, red } from '@itswooble/colors';
+import { black, colors, gray300, red } from '@itswooble/colors';
+
+import { P } from '../../typefaces';
 
 import Props from './Textarea.props';
 import styles from './Textarea.module.css';
@@ -15,7 +17,7 @@ const Textarea: React.FC<Props> = ({ className = '', color = 'blue300', errorMes
 
 	function getBorder() {
 		if(isFocused)
-			return colorsVariants.includes(color as Colors) ? colors[color as Colors] : color;
+			return colors[color];
 		else if(errorMessage)
 			return red;
 		else
@@ -36,16 +38,14 @@ const Textarea: React.FC<Props> = ({ className = '', color = 'blue300', errorMes
 					textareaRef.current?.focus();
 				}}
 			>
-				<p
-					className={cn(className, styles.placeholder, {
+				<P
+					className={cn(styles.placeholder, {
 						[styles['placeholder-focused']]: isFocused || value || localValue,
 					})}
-					style={{
-						color: errorMessage ? red : gray500,
-					}}
+					color={errorMessage ? 'red' : 'gray500'}
 				>
 					{placeholder}
-				</p>
+				</P>
 				<textarea
 					ref={textareaRef}
 					onFocus={(e) => {
@@ -65,7 +65,7 @@ const Textarea: React.FC<Props> = ({ className = '', color = 'blue300', errorMes
 						setTextareaHeight(textareaRef.current.scrollHeight);
 					}}
 					value={value}
-					className={cn(className, styles.textarea)}
+					className={styles.textarea}
 					style={{
 						color: black,
 						height: textareaHeight,
@@ -73,9 +73,9 @@ const Textarea: React.FC<Props> = ({ className = '', color = 'blue300', errorMes
 					{...props} />
 			</div>
 			{errorMessage && (
-				<p className={cn(className, [styles['error-message']])} style={{ color: red }}>
+				<P variant='BodyText_14' color='red' className={styles['error-message']}>
 					{errorMessage}
-				</p>
+				</P>
 			)}
 		</>
 	);

@@ -5,7 +5,7 @@ interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDi
 	title: string;
 	subtitle?: string;
 	avatar?: string;
-	avatarColor?: Colors | string;
+	avatarColor?: Colors;
 	href?: string;
 }
 
