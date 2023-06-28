@@ -49,13 +49,13 @@ const App = () => (
 We use storybook. Clone locally:
 
 ```bash
-$ git clone git@github.com:wooble-place/wooble-ui.git
+$ git clone git@github.com:wooble-team/wooble-ui.git
 $ cd wooble-ui
 $ npm install
 $ npm run storybook
 ```
 
-Open your browser and visit [http://172.20.10.3:6006/](http://172.20.10.3:6006/).
+Open your browser and visit [http://localhost:6006/](http://localhost:6006/).
 
 ## 👋 Founders  
 - [Kirill Osintsev](https://github.com/crashzky)

@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wooble-place/wooble-ui.git"
+    "url": "git+https://github.com/wooble-team/wooble-ui.git"
   },
   "keywords": [
     "wooble",
@@ -31,7 +31,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wooble-place/wooble-ui/issues"
+    "url": "https://github.com/wooble-team/wooble-ui/issues"
   },
   "homepage": "https://ui.wooble.team",
   "publishConfig": {
