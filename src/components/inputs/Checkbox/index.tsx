@@ -4,7 +4,7 @@ import { black, gray300, red } from '@itswooble/colors';
 
 import { P, getTypefaces } from '../../typefaces';
 
-import Props from './Checkbox';
+import Props from './Checkbox.props';
 import BACKGROUND from './background.config';
 import styles from './Checkbox.module.css';
 

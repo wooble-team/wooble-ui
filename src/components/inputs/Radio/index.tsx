@@ -4,7 +4,7 @@ import { black, gray300, red } from '@itswooble/colors';
 
 import { P, getTypefaces } from '../../typefaces';
 
-import Props from './Radio';
+import Props from './Radio.props';
 import BACKGROUND from './background.config';
 import styles from './Radio.module.css';
 

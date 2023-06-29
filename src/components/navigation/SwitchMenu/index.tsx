@@ -4,7 +4,7 @@ import { gray100, white } from '@itswooble/colors';
 
 import { getTypefaces } from '../../typefaces';
 
-import Props from './SwitchMenu';
+import Props from './SwitchMenu.props';
 import styles from './SwitchMenu.module.css';
 
 const SwitchMenu: React.FC<Props> = ({ className = '', items, onItemChanged = () => null, defaultValue }) => {

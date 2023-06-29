@@ -4,7 +4,7 @@ import { black, gray300 } from '@itswooble/colors';
 
 import { getTypefaces } from '../../typefaces';
 
-import Props from './TabsMenu';
+import Props from './TabsMenu.props';
 import styles from './TabsMenu.module.css';
 
 const TabsMenu: React.FC<Props> = ({ className = '', items, defaultValue, onItemChanged = () => undefined, ...props }) => {

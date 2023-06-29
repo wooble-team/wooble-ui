@@ -1,0 +1,14 @@
+.container {
+	display: flex;
+	
+	width: fit-content;
+	gap: 4px;
+}
+
+.right-block {
+	margin-left: 4px;
+}
+
+.left-block {
+	margin-right: 4px;
+}
